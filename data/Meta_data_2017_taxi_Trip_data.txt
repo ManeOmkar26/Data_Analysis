@@ -1,0 +1,19 @@
+Column Name		Data Type			Description
+ID			Integer		Unique trip identification number.
+VendorID		Integer		Code indicating the TPEP provider that supplied the trip record. (1 = Creative Mobile Technologies, LLC, 2 = VeriFone Inc.)
+tpep_pickup_datetime	Datetime	Date and time when the taxi meter was engaged (trip start time).
+tpep_dropoff_datetime	Datetime	Date and time when the taxi meter was disengaged (trip end time).
+Passenger_count		Integer		Number of passengers in the vehicle, entered by the driver.
+Trip_distance		Float		Distance traveled during the trip in miles as recorded by the taximeter.
+PULocationID		Integer		TLC Taxi Zone where the trip began (pickup location).
+DOLocationID		Integer		TLC Taxi Zone where the trip ended (dropoff location).
+RateCodeID		Integer		Final rate code applied to the trip. (1 = Standard Rate, 2 = JFK, 3 = Newark, 4 = Nassau/Westchester, 5 = Negotiated Fare, 6 = Group 						Ride)
+Store_and_fwd_flag	Categorical(Y/N Indicates whether trip data was stored in vehicle memory before transmission due to lack of server connectivity.
+Payment_type		Integer		Method used to pay for the trip. (1 = Credit Card, 2 = Cash, 3 = No Charge, 4 = Dispute, 5 = Unknown, 6 = Voided Trip)
+Fare_amount		Float		Base fare calculated by the taximeter based on time and distance.
+Extra			Float		Additional charges such as rush-hour and overnight surcharges.
+MTA_tax			Float		Fixed $0.50 Metropolitan Transportation Authority tax applied to eligible trips.
+Improvement_surcharge	Float		Fixed $0.30 surcharge collected to support transportation infrastructure improvements.
+Tip_amount		Float		Tip amount paid by the passenger. Credit card tips are automatically recorded; cash tips are not included.
+Tolls_amount		Float		Total toll charges incurred during the trip.
+Total_amount		Float		Total fare charged to the passenger, including taxes, surcharges, tolls, and recorded tips (excluding cash tips).
